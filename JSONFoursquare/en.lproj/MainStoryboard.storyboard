@@ -1,17 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oBA-Nl-dO2">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="aqF-b2-34r"/>
+                                    <outlet property="delegate" destination="2" id="MhI-ds-HbV"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ix9-uL-cbs">
+                                <items>
+                                    <navigationItem title="Venues near Moscow" id="uEc-uy-Z8d"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ix9-uL-cbs" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="0zN-4h-DZ0"/>
+                            <constraint firstItem="oBA-Nl-dO2" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="4IW-56-fIz"/>
+                            <constraint firstItem="oBA-Nl-dO2" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="JbH-3Z-Qyj"/>
+                            <constraint firstItem="oBA-Nl-dO2" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="Tgz-lZ-qPK"/>
+                            <constraint firstItem="Ix9-uL-cbs" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="WB0-cW-fry"/>
+                            <constraint firstItem="oBA-Nl-dO2" firstAttribute="top" secondItem="Ix9-uL-cbs" secondAttribute="bottom" type="default" id="gLH-xw-k69"/>
+                            <constraint firstItem="Ix9-uL-cbs" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="sO5-DY-FmB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
